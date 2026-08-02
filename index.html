@@ -3,12 +3,31 @@
 
 <body style="background-color: #c9ffcf; color: #000000;"
 style="font-family: Helvetica, Noto Sans, sans-serif;">
-    <h1 style="margin: 3px; padding: 2px;">ahsenOS</h1>
-    <h2>About Me</h2>
-    <p>Hello world! Welcome to my web-based operating system.<br>I'm <strong>AHSEN</strong> and I'm currently in high school in Turkey!</p>
-    <img style="width: 90px; height: 100px; border-radius: 50%;" src="me.png" alt="My Profile Image"/>
-    <a href="https://github.com/AhsenEda">My GitHub</a>
-    <a href="https://www.linkedin.com/in/ahsen-oruc-6819b9290/">My LinkedIn</a>
-  </body>
+<div style="position: absolute; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; flex-direction: column; 
+background-color: #d8f7dc; color: #000000; backdrop-filter: blur(10px); padding: 8px 16px; box-sizing: border-box;">
+   <p style="margin: 0; font-weight: bold;">ahsenOS</p>
+   <p id="timeElement" style="margin: 0; font-weight: bold;">Loading time...</p>
+</div>
 
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+border: 2px solid #000000; border-radius: 16px; padding: 24px; background-color: #f3f7d8; text-align: center; width: 300px;">
+
+  <h2 style="margin: 3px; padding: 2px;">About Me</h2>
+    <p>Hello world! Welcome to my webOS.<br>I'm <strong>AHSEN</strong> and I'm currently in high school in Turkey!</p>
+    <img style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 8px 0;" src="me.png" alt="My Profile Image"/>
+    <br>
+    <a href="https://github.com/AhsenEda" target="_blank" >My GitHub</a>
+    <a href="https://www.linkedin.com/in/ahsen-oruc-6819b9290/" target="_blank" >My LinkedIn</a>
+</div>
+
+<script>
+    function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+  </body>
 </html>
