@@ -1,0 +1,89 @@
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Playfair Display', serif;
+  color: #2b1a28;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.05);
+  background-size: cover;
+}
+
+#app-shell,
+#welcome {
+  font-family: 'Playfair Display', serif;
+}
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  padding: 18px;
+  background-color: rgba(243, 247, 216, 0.95);
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.titlebar {
+  display: inline-flex !important;
+  flex-wrap: nowrap !important;
+  gap: 2px !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  width: auto !important;
+  padding: 0 !important;
+  white-space: nowrap;
+}
+
+.titlebar > * {
+  flex: 0 0 auto !important;
+}
+
+.windowheader,
+.closebutton {
+  font-family: 'Playfair Display', serif;
+  cursor: grab;
+  user-select: none;
+  margin: 0 !important;
+  padding: 1px 5px !important;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #584147;
+  border: 1px solid rgba(88, 65, 71, 0.18);
+  line-height: 1;
+}
+
+.windowheader {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.closebutton {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.closebutton:hover,
+.windowheader:hover {
+  opacity: 1;
+}
+
+.selected {
+ transform: scale(1.08); 
+  opacity: 1; 
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)); 
+  transition: all 0.2s ease-in-out; 
+}
